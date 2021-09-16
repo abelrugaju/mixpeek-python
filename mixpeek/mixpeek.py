@@ -1,13 +1,12 @@
-from config import mixpeek, aws
 import requests
 import boto3
 import os
 
 
 class Mixpeek:
-    def __init__(self):
-        self.base_url = "http://localhost:5000"
-        self.api_key = mixpeek['api_key']
+    def __init__(self, api_key):
+        self.base_url = "https://api.mixpeek.com"
+        self.api_key = api_key
 
     def upload(self, file_name, file_path):
         # build api endpoint url with key and path
@@ -37,14 +36,14 @@ class Mixpeek:
 
 
 class S3:
-    def __init__(self):
+    def __init__(self, aws_access_key_id, aws_secret_access_key, region_name, mixpeek_api_key):
         self.s3_client = boto3.client(
             's3',
-            aws_access_key_id=aws['aws_access_key_id'],
-            aws_secret_access_key=aws['aws_secret_access_key'],
-            region_name=aws['region_name']
+            aws_access_key_id=aws_access_key_id,
+            aws_secret_access_key=aws_secret_access_key,
+            region_name=region_name
         )
-        self.mixpeek = Mixpeek()
+        self.mixpeek = Mixpeek(api_key=mixpeek_api_key)
 
     def upload_one(self, s3_file_name, bucket_name):
         tmp_file = f'tmp/{s3_file_name}'

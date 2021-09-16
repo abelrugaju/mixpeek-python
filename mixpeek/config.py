@@ -1,8 +1,4 @@
-# credentials
-
-mixpeek = {
-    "api_key": ""
-}
+mixpeek_api_key = ""
 
 aws = {
     'aws_access_key_id': '',
