@@ -139,6 +139,19 @@ and ask any technical questions on
 We keep an eye on both.
 
 
+## 🚀 Features
+
+- Supports for `Python 3.8` and higher.
+- Full text search
+- AWS S3 Integration
+- Fuzzy text matching
+
+
+## Articles:
+
+- [Add search to your S3 bucket’s non-text files](https://medium.com/@mixpeek/add-search-to-your-s3-buckets-non-text-files-9a676452b4fd)
+
+
 ## License ([MIT License](http://opensource.org/licenses/mit-license.php))
 
 Copyright © 2022 Mixpeek, https://mixpeek.com
@@ -161,71 +174,3 @@ NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
 LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
 OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-
-
-
--------------
-
-# mixpeek
-
-<div align="center">
-
-Package for using the Mixpeek api: file search for your software
-
-</div>
-
-## Quick start
-
-### Install and import
-
-1. Install the library
-
-```bash
-pip install mixpeek
-```
-
-2. Request an API key
-
-[On the website](https://mixpeek.com)
-
-### Write your code
-
-1. Import your modules
-
-```python
-from mixpeek import mixpeek
-```
-
-2. Instantiate the module:
-
-```python
-mix = Mixpeek(
-    api_key="my-api-key"
-)
-```
-
-3. Upload a file:
-
-```python
-mix.upload(file_name="my-file-name.pdf", file_path="/tmp/my-file-name.pdf")
-```
-
-4. Now search:
-
-```python
-mix.search(query="my search query")
-```
-load_one(s3_file_name="prescription.pdf", bucket_name="mixpeek-demo")
-```
-
-### Articles:
-
-- [Add search to your S3 bucket’s non-text files](https://medium.com/@mixpeek/add-search-to-your-s3-buckets-non-text-files-9a676452b4fd)
-
-### 🚀 Features
-
-- Supports for `Python 3.8` and higher.
-- Full text search
-- AWS S3 Integration
-- Fuzzy text matching
