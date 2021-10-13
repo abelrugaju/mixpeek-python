@@ -1,0 +1,9 @@
+LICENSE.rst
+README.md
+setup.cfg
+setup.py
+src/mixpeek.egg-info/PKG-INFO
+src/mixpeek.egg-info/SOURCES.txt
+src/mixpeek.egg-info/dependency_links.txt
+src/mixpeek.egg-info/requires.txt
+src/mixpeek.egg-info/top_level.txt
