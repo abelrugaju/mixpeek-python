@@ -104,7 +104,7 @@ print(query)
 Installing mixpeek is easy
 
 ```shell
-pip install git+https://github.com/mixpeek/mixpeek-python.git@master
+pip install mixpeek
 ```
 
 
